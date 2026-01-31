@@ -3,7 +3,8 @@ import { createContext, useContext } from 'react';
 
 export interface ModalContextValue {
   isOpen: boolean;
-  onClose: () => void;
+  onOpen: () => void; // [추가] 열기 함수
+  onClose: () => void; // 닫기 함수
 }
 
 export const ModalContext = createContext<ModalContextValue | null>(null);
